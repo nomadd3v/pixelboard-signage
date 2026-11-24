@@ -1,0 +1,25 @@
+/* Vellum editor affordances inside the edit-mode preview. */
+.v-slot {
+  outline: 1px dashed rgba(37, 99, 235, 0.45);
+  outline-offset: 2px;
+  cursor: text;
+  transition: outline-color 0.12s, background 0.12s;
+}
+.v-slot:hover {
+  outline-color: rgba(37, 99, 235, 0.9);
+  background: rgba(37, 99, 235, 0.06);
+}
+.v-slot[contenteditable='true'] {
+  outline: 2px solid #2563eb;
+  background: rgba(37, 99, 235, 0.08);
+}
+[data-v-attr] {
+  outline: 1px dashed rgba(16, 185, 129, 0.5);
+  outline-offset: 2px;
+}
+/* the slot whose field is focused in the shell */
+.v-slot.v-focus {
+  outline: 3px solid #f59e0b;
+  outline-offset: 3px;
+  background: rgba(245, 158, 11, 0.15);
+}

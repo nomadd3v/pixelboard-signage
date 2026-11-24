@@ -1,0 +1,38 @@
+{
+  "name": "pixelboard",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Canva-style design editor for digital signage: design a board once, let staff edit only guarded slots, publish immutable snapshots to screens.",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "node --env-file-if-exists=.env.local --watch src/server.js",
+    "start": "node --env-file-if-exists=.env.local src/server.js",
+    "ingest": "node --env-file-if-exists=.env.local scripts/ingest.js",
+    "test": "node --test",
+    "build:demo": "node src/demo/build.mjs",
+    "convert": "node --env-file-if-exists=.env.local scripts/convert-site.mjs"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.68.0",
+    "cheerio": "^1.0.0",
+    "express": "^4.21.2",
+    "fabric": "^7.4.0",
+    "playwright": "^1.61.0"
+  },
+  "devDependencies": {
+    "@fontsource-variable/fraunces": "^5.3.0",
+    "@fontsource-variable/inter": "^5.3.0",
+    "@fontsource-variable/jetbrains-mono": "^5.3.0",
+    "@fontsource-variable/oswald": "^5.3.0",
+    "@fontsource-variable/playfair-display": "^5.3.0",
+    "@fontsource-variable/space-grotesk": "^5.3.0",
+    "@fontsource/anton": "^5.3.0",
+    "@fontsource/archivo-black": "^5.3.0",
+    "@fontsource/bebas-neue": "^5.3.0",
+    "esbuild": "^0.28.2"
+  },
+  "license": "SEE LICENSE IN LICENSE"
+}
